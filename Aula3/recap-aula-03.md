@@ -1,6 +1,6 @@
 # 📋 Recap da Aula 03 — Módulo de Prática
 
-## Fundamentos PHP: Saída de Dados, Variáveis, Tipos e Estruturas Condicionais
+## Fundamentos PHP: Saída de Dados, Variáveis, Constantes e Operadores
 
 **Público-alvo:** Para Leigos & Iniciantes  
 **Objetivo:** Dar os primeiros passos práticos na sintaxe do PHP — exibir dados, guardar valores em memória, operar números e tomar decisões no código.
@@ -57,7 +57,7 @@ echo "Resultado: " . var_export($a > $b, true);  // Resultado: true
 
 ---
 
-## 3.2 Memória — Variáveis e Constantes
+## 3.2 Variáveis e Constantes — Guardando Valores em Memória
 
 ### Variáveis
 
@@ -82,7 +82,9 @@ const URL_SITE = "meusite.com";
 
 > ⚠️ **Cuidado:** use constantes no **topo** do arquivo, antes de usá-las. O PHP executa o arquivo de cima para baixo — usar uma constante antes da definição gera *Fatal error*.
 
-### Tipos de Dados — Como Descobrir o Tipo
+### 3.3 Tipos de Dados — Visão Geral
+
+> 📖 Este tópico foi aprofundado na **Aula 04** (coerção automática, casting, valores *falsy* e a armadilha do `==`). Aqui está só a visão geral.
 
 `gettype()` revela o tipo de uma variável:
 
@@ -104,7 +106,7 @@ echo gettype([1,2,3]);  // array
 
 ---
 
-## 3.3 Operadores — Cálculos
+## Operadores (continuação do 3.2) — Cálculos e Comparações
 
 ### Aritméticos
 
@@ -143,7 +145,9 @@ $maiorDeIdade = ($idade > 18 && $temCNH === true);
 
 ---
 
-## 3.4 Estruturas Condicionais
+## 3.5 Estruturas Condicionais
+
+> 📖 Este tópico foi aprofundado na **Aula 04** (`if/elseif/else`, `switch` e a armadilha de comparar faixas com `switch`).
 
 ### `if` / `elseif` / `else`
 
@@ -206,10 +210,11 @@ echo var_export($a === $b, true); // false
 
 1. Recapitulação da Aula 02 (ambiente, terminal, servidor)
 2. **3.1 Saída de dados** — `echo`, `print`, `print_r()`, `var_dump()`
-3. **3.2 Memória** — Variáveis (`$`) e Constantes (`define()` / `const`)
-4. **Tipos de dados** — `gettype()`: string, integer, double, boolean, array
-5. **3.3 Operadores** — Aritméticos, Relacionais e Lógicos
-6. **3.4 Estruturas condicionais** — `if/elseif/else`, ternário, `match`, `??`
+3. **3.2 Variáveis, constantes e operadores** — `$`, `define()`/`const`, aritméticos, relacionais e lógicos
+4. **3.3 Tipos de dados** (visão geral) — `gettype()`: string, integer, double, boolean, array
+5. **3.5 Estruturas condicionais** (introdução) — `if/elseif/else`, ternário, `match`, `??`
+
+> **Continua na Aula 04:** `3.3` tipos e coerção · `3.4` entrada de dados · `3.5.1` if/else · `3.5.2` switch
 
 ---
 

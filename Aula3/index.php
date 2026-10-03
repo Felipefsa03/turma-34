@@ -1,157 +1,77 @@
-<?php
+<?php 
 
-// ============================================
-// AULA 03 - FUNDAMENTOS PHP
-// Saída de dados, Variáveis, Tipos e Estruturas Condicionais
-// ============================================
-
-// --------------------------------------------
-// CONSTANTES (definidas antes do uso)
-// --------------------------------------------
-
-define("PI", 3.14);
-const URL_SITE = "https://www.google.com.br";
-
-// --------------------------------------------
-// 3.1 SAÍDA DE DADOS
-// --------------------------------------------
-
-// echo: principal construtor para imprimir textos e variáveis.
-echo "Olá, Mundo!";
-
-// print: similar ao echo, mas sempre retorna 1.
-print "Primeira aula de PHP.";
-
-// Variaveis (distintas)
-$pipipi = "pipipi";
-$popopo = "popopo";
-
-// Concatenação com ponto (.)
-echo $pipipi . " " . $popopo;
-
-echo "\n";
-
-// print_r(): inspeção detalhada de arrays e objetos.
-print_r(URL_SITE);
-
-// var_dump(): mostra tipo e valor com mais detalhe.
-var_dump($pipipi);
-
-echo "\n";
-
-
-// --------------------------------------------
-// 3.2 MEMÓRIA - VARIÁVEIS E CONSTANTES
-// --------------------------------------------
-
-// Variáveis: iniciam sempre com o cifrão ($)
-// São case-sensitive (diferenciam maiúsculas e minúsculas).
-$idade = 25;
-$Idade = 30;
-
-$nome = "Maria";
-$temCNH = true;
-
-echo "Idade (minuscula): $idade";
-echo "\n";
-echo "Idade (maiuscula): $Idade";
-echo "\n";
-
-echo "Constante PI: " . PI;
-echo "\n";
-echo "Constante URL_SITE: " . URL_SITE;
-echo "\n";
-
-// gettype() mostra o tipo do valor.
-echo "Tipo de \$idade: " . gettype($idade);
-echo "\n";
-echo "Tipo de \$nome: " . gettype($nome);
-echo "\n";
-
-// --------------------------------------------
-// 3.3 OPERADORES - ARITMÉTICOS
-// --------------------------------------------
-
-$a = 10;
-$b = 20;
-
-echo "Aritméticos";
-echo "\n";
-echo "Soma: " . ($a + $b);
-echo "\n";
-echo "Subtração: " . ($b - $a);
-echo "\n";
-echo "Multiplicação: " . ($a * $b);
-echo "\n";
-echo "Divisão: " . ($b / $a);
-echo "\n";
-echo "Módulo (resto): " . ($b % $a);
-echo "\n";
-echo "Exponenciação: " . ($a ** 2);
-echo "\n";
-
-// --------------------------------------------
-// 3.4 OPERADORES - RELACIONAIS E LÓGICOS
-// --------------------------------------------
-
-echo "Relacionais";
-echo "\n";
-echo "10 == 10: " . var_export($a == 10, true);
-echo "\n";
-echo "10 === '10': " . var_export($a === "10", true);
-echo "\n";
-echo "10 != 5: " . var_export($a != 5, true);
-echo "\n";
-echo "20 > 10: " . var_export($b > $a, true);
-echo "\n";
-
-// Operador lógico: && (E), || (OU), ! (NÃO)
-echo "Lógicos";
-echo "\n";
-echo "&& (E): " . var_export($idade > 18 && $temCNH, true);
-echo "\n";
-echo "|| (OU): " . var_export($idade > 30 || $temCNH, true);
-echo "\n";
-echo "! (NÃO): " . var_export(!$temCNH, true);
-echo "\n";
-
-$maiorDeIdade = ($idade > 18 && $temCNH === true);
-echo "Maior de idade com CNH: " . var_export($maiorDeIdade, true);
-echo "\n";
-
-// --------------------------------------------
-// 3.5 ESTRUTURAS CONDICIONAIS
-// --------------------------------------------
-
-$nota = 7.5;
-
-if ($nota >= 7) {
-    echo "Aprovado com louvor!";
-} elseif ($nota >= 5) {
-    echo "Aprovado.";
-} else {
-    echo "Reprovado.";
+function limparTerminal(){
+    echo "\033[2J\033[;H";
 }
-echo "\n";
 
-// Ternário: condição ? valor_verdadeiro : valor_falso
-echo "Situação: " . ($nota >= 5 ? "Aprovado" : "Reprovado");
-echo "\n";
+limparTerminal();
+echo "       ------       \n";
+echo "formulario xd       \n";
+echo "       ------       \n";
 
-// Match: alternativa moderna ao switch (PHP 8.0+)
-$diaSemana = "sexta";
+// informações do usuario
 
-$status = match ($diaSemana) {
-    "segunda", "terca", "quarta", "quinta" => "Início da semana.",
-    "sexta" => "Sextou!",
-    "sabado", "domingo" => "Fin de semana.",
-    default => "Dia inválido.",
-};
+$nome = readline("digite seu nome aqui: ");
 
-echo "Match: " . $status;
-echo "\n";
+while (true) {
+    $email = readline("digite seu email: ");
 
-// Operador null coalescing (??) - evita erro com variável não definida
-$usuario = null;
-$nomePadrao = $usuario ?? "Visitante";
-echo "Nome padrão: " . $nomePadrao;
+
+    if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+        break; 
+    }
+    echo "email invalido! tente novamente. \n";
+}
+
+while (true) {
+    $idade = readline("digite sua idade: ");
+
+    if(filter_var($idade, FILTER_VALIDATE_INT)){
+        break;
+    }
+    echo "isso não é sua idade sacana";
+}
+
+echo "\n selecione seu curso \n ";
+echo "[1] curso de fazer 67 \n";
+echo "[2] curso de larpar \n";
+echo "[3] curso de farmar aura \n";
+
+while (true){
+    $opcao = readline("Escolha uma opção entre 1 a 3: ");
+
+    switch ($opcao) {
+        case '1': $perfil = "curso de fazer 67"; break 2;
+        case '2': $perfil = "curso de larpar"; break 2;
+        case '3': $perfil = "curso de farmar aura"; break 2;
+        default: echo "X opção inválida! Escolha 1, 2 ou 3.\n";
+    }
+}
+
+// aprovado
+
+$minimo = 18;
+
+$calculo1 = $idade >= $minimo ? "maior de idade" : "menor de idade";
+
+$calculo2 = "menor de idade" == "aprovado" ? "aprovado" : "reprovado";
+
+$calculo3 = "maior de idade" == "reprovado" ? "reprovado" : "aprovado";
+
+$calculo4 = $idade >= $minimo ? "aprovado" : "reprovado";
+
+// final
+
+limparTerminal();
+
+echo "       ------       \n";
+echo "       parabens por ter concluido o formulario       \n";
+echo "       ------       \n";
+
+echo "👤 Nome: $nome \n";
+echo "📧 E-mail: $email \n";
+echo "🔑 curso: $perfil \n";
+echo "🔍 o canditado está: $calculo4 \n";
+
+
+?>
