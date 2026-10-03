@@ -82,6 +82,14 @@ encerrar o servidor.
 php index.php
 ```
 
+> 💡 O `desafio.php` da Aula 04 **precisa** ser executado no terminal, porque usa
+> `readline()`. Rode com `php desafio.php` — ele recebe as respostas digitadas.
+> Para automatizar um teste completo, encadeie a entrada:
+>
+> ```bash
+> printf '1\nAna Souza\n22\n2\n9\n8\n3\n4\n' | php desafio.php
+> ```
+
 ### 5. Contribuir com o repositório
 
 ```bash
@@ -110,10 +118,15 @@ turma-34/
 │   ├── Ambiente de Desenvolvimento e Terminal PHP.pdf
 │   ├── index.php             # Exemplos práticos
 │   └── recap-aula-02.md
-└── Aula3/                    # Fundamentos PHP
+├── Aula3/                    # Fundamentos PHP (parte 1)
+│   ├── Fundamentos PHP.pdf
+│   ├── index.php             # Testes de cada tema trabalhado
+│   └── recap-aula-03.md
+└── Aula4/                    # Fundamentos PHP (parte 2)
     ├── Fundamentos PHP.pdf
-    ├── index.php             # Testes de cada tema trabalhado
-    └── recap-aula-03.md
+    ├── index.php             # Tipos, coerção, entrada de dados e condicionais
+    ├── desafio.php           # Desafio das Aulas 03 e 04 (com solução)
+    └── recap-aula-04.md
 ```
 
 A organização segue o padrão **`Aula<n>/`**, e dentro de cada pasta:
@@ -138,7 +151,8 @@ fáceis de ler no GitHub e no celular.
 | `Introdução à Programação, Git e PHP.pdf` | 01 | Programação, sistemas, lógica, fluxogramas e Git |
 | `Apresentação COUDE - Luis Felipe.pdf` | 01 | Contextualização do curso e da turma |
 | `Ambiente de Desenvolvimento e Terminal PHP.pdf` | 02 | IDE, terminal, CLI e servidor local |
-| `Fundamentos PHP.pdf` | 03 | Saída de dados, variáveis, tipos e condicionais |
+| `Fundamentos PHP.pdf` (Aula 03) | 03 | Saída de dados, variáveis, constantes e operadores |
+| `Fundamentos PHP.pdf` (Aula 04) | 04 | Tipos e coerção, entrada de dados e condicionais |
 
 > 💡 Os slides das próximas aulas serão adicionados a cada encontro, sempre na pasta da
 > aula correspondente.
@@ -394,8 +408,9 @@ O versionamento com Git e GitHub é prática **contínua e obrigatória** em tod
 |:----:|:------:|----------|:------:|:-----:|:------:|
 | 01 | 1 · Introdução | Programação, sistemas, lógica, fluxogramas e Git | ✅ | [`recap-aula-01.md`](Aula1/recap-aula-01.md) | — |
 | 02 | 2 · Ambiente | IDE, terminal, CLI e servidor local | ✅ | [`recap-aula-02.md`](Aula2/recap-aula-02.md) | ✅ |
-| 03 | 3 · Fundamentos PHP | Saída de dados, variáveis, tipos e condicionais | ✅ | [`recap-aula-03.md`](Aula3/recap-aula-03.md) | ✅ |
-| 04 | 3 · Fundamentos PHP | Laços de repetição, arrays e funções | 🔜 | — | — |
+| 03 | 3 · Fundamentos PHP | Saída de dados, variáveis, constantes e operadores | ✅ | [`recap-aula-03.md`](Aula3/recap-aula-03.md) | ✅ |
+| 04 | 3 · Fundamentos PHP | Tipos e coerção, entrada de dados (`$_POST`, `$_GET`, `readline`) e condicionais | ✅ | [`recap-aula-04.md`](Aula4/recap-aula-04.md) | ✅ |
+| 05 | 3 · Fundamentos PHP | Laços de repetição, arrays e funções | 🔜 | — | — |
 
 ---
 
