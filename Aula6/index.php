@@ -106,7 +106,8 @@
     }
 
     // 3.4 — Desafio 5: Cadastro interativo (Entrada de dados)
-	// Desenvolva um pequeno cadastro que solicite ao usuário seu nome, sua idade e sua linguagem de programação favorita.
+	// Desenvolva um pequeno cadastro que solicite ao usuário seu nome, sua idade e sua linguagem de 
+    // programação favorita.
 	// Utilize readline() e exiba uma mensagem personalizada ao final.
 	// EXEMPLO DE EXECUÇÃO NO TERMINAL
 	// Digite seu nome: Ana
@@ -117,3 +118,22 @@
 	// e gosta de programar em PHP!
 
 
+$name = readline("Digite seu nome: ");
+$age = readline("Digite sua idade: ");
+$favorite_language = readline("Linguagem favorita: ");
+
+echo "\nOlá, " . $name . "! Você tem " . $age . " anos\n";
+echo "e gosta de programar em " . $favorite_language . "!\n";
+
+
+
+	// 3.5.1 — Desafio 6: Sistema de aprovação (if/else)
+	// Uma escola precisa de um sistema para classificar as notas dos alunos.
+	// Solicite uma nota entre 0 e 10 e exiba:
+	// Nota	Resultado
+	// 7 até 10	Aprovado
+	// 5 até abaixo de 7	Recuperação
+	// 0 até abaixo de 5	Reprovado
+	// Fora de 0 a 10	Nota inválida
+	// Desafio extra: solicite também a frequência do aluno. Para ser aprovado, ele precisa ter nota 
+    // maior ou igual a 7 e frequência de pelo menos 75%.
