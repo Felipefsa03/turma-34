@@ -122,11 +122,14 @@ turma-34/
 │   ├── Fundamentos PHP.pdf
 │   ├── index.php             # Testes de cada tema trabalhado
 │   └── recap-aula-03.md
-└── Aula4/                    # Fundamentos PHP (parte 2)
-    ├── Fundamentos PHP.pdf
-    ├── index.php             # Tipos, coerção, entrada de dados e condicionais
-    ├── desafio.php           # Desafio das Aulas 03 e 04 (com solução)
-    └── recap-aula-04.md
+├── Aula4/                    # Fundamentos PHP (parte 2)
+│   ├── Fundamentos PHP.pdf
+│   ├── index.php             # Tipos, coerção, entrada de dados e condicionais
+│   ├── desafio.php           # Desafio das Aulas 03 e 04 (com solução)
+│   └── recap-aula-04.md
+└── Aula5/                    # Fundamentos PHP (revisão + laços de repetição)
+    ├── Fundamentos_PHP_Revisao_e_Lacos.pdf
+    └── index.php             # Revisão 3.1–3.5 + laços (while, do-while, for, foreach)
 ```
 
 A organização segue o padrão **`Aula<n>/`**, e dentro de cada pasta:
@@ -153,6 +156,7 @@ fáceis de ler no GitHub e no celular.
 | `Ambiente de Desenvolvimento e Terminal PHP.pdf` | 02 | IDE, terminal, CLI e servidor local |
 | `Fundamentos PHP.pdf` (Aula 03) | 03 | Saída de dados, variáveis, constantes e operadores |
 | `Fundamentos PHP.pdf` (Aula 04) | 04 | Tipos e coerção, entrada de dados e condicionais |
+| `Fundamentos_PHP_Revisao_e_Lacos.pdf` | 05 | Revisão dos fundamentos (3.1–3.5) e laços de repetição (3.6) |
 
 > 💡 Os slides das próximas aulas serão adicionados a cada encontro, sempre na pasta da
 > aula correspondente.
@@ -410,7 +414,7 @@ O versionamento com Git e GitHub é prática **contínua e obrigatória** em tod
 | 02 | 2 · Ambiente | IDE, terminal, CLI e servidor local | ✅ | [`recap-aula-02.md`](Aula2/recap-aula-02.md) | ✅ |
 | 03 | 3 · Fundamentos PHP | Saída de dados, variáveis, constantes e operadores | ✅ | [`recap-aula-03.md`](Aula3/recap-aula-03.md) | ✅ |
 | 04 | 3 · Fundamentos PHP | Tipos e coerção, entrada de dados (`$_POST`, `$_GET`, `readline`) e condicionais | ✅ | [`recap-aula-04.md`](Aula4/recap-aula-04.md) | ✅ |
-| 05 | 3 · Fundamentos PHP | Laços de repetição, arrays e funções | 🔜 | — | — |
+| 05 | 3 · Fundamentos PHP | Revisão (3.1–3.5) + laços de repetição (3.6) — encontro em andamento até o slide 10 | ✅ | — | ✅ |
 
 ---
 
