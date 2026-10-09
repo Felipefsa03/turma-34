@@ -59,3 +59,29 @@
 	// Desconto: R$ 10
 	// Total: R$ 150
 	// Compra acima de R$ 100? Sim
+
+    $quantity = 2;
+    $subtotal = $price * $quantity;
+    $discount = 10;
+    $total = $subtotal - $discount;
+
+    echo "Preço: R$ " . $price . "\n";
+    echo "Quantidade: " . $quantity . "\n";
+    echo "Subtotal: R$ " . $subtotal . "\n";
+    echo "Desconto: R$ " . $discount . "\n";
+    echo "Total: R$ " . $total . "\n";
+
+    if ($total > 100) {
+        echo "Compra acima de R$ 100? Sim\n";
+    } else {
+        echo "Compra acima de R$ 100? Não\n";
+    }
+
+
+    
+
+    // 3.3 — Desafio 4: O mistério dos tipos de dados
+	// Crie quatro variáveis contendo: "25", 25, 25.5 e true.
+	// Utilize var_dump() para descobrir o tipo de cada variável. Depois, transforme a string "25" em um 
+    // número inteiro usando type casting e compare com o número 25 utilizando ===.
+	// Pergunta para a turma: por que "25" === 25 retorna false, mesmo que os valores pareçam iguais?
