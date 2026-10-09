@@ -1,16 +1,17 @@
 <?php
 
 // ============================================
-// AULA 05 - FUNDAMENTOS PHP: REVISÃO + LAÇOS (NN FOI TODOS)
+// AULA 05 - FUNDAMENTOS PHP: REVISÃO + LAÇOS
+// Slides 01-10:
 //   3.1 Saída de dados
 //   3.2 Variáveis, constantes e operadores
 //   3.3 Tipos de dados e coerção
 //   3.4 Entrada de dados
 //   3.5 Estruturas condicionais
-//   3.6 Estruturas de repetição (while, do-while, for, foreach)
+//   3.6 Estruturas de repetição (introdução - slide 10)
 // ============================================
 
-// Ao abrir pelo navegador, preserva os espaços e quebras de linha, ou seja, ignorem essa linha
+// Ao abrir pelo navegador, preserva os espaços e quebras de linha.
 if (PHP_SAPI !== 'cli') {
     echo "<pre>";
 }
@@ -64,11 +65,11 @@ echo "=== 3.2 Operadores ===\n";
 $a = 10;
 $b = 3;
 
-echo "Soma:        " . ($a + $b) . "\n";   // 13
-echo "Subtração:   " . ($a - $b) . "\n";   // 7
-echo "Multiplicação: " . ($a * $b) . "\n"; // 30
-echo "Divisão:     " . ($a / $b) . "\n";   // 3.33...
-echo "Resto:       " . ($a % $b) . "\n";   // 1
+echo "Soma:          " . ($a + $b) . "\n";   // 13
+echo "Subtração:     " . ($a - $b) . "\n";   // 7
+echo "Multiplicação: " . ($a * $b) . "\n";   // 30
+echo "Divisão:       " . ($a / $b) . "\n";   // 3.33...
+echo "Resto:         " . ($a % $b) . "\n";   // 1
 
 var_dump($a == $b);   // false — mesmo valor?
 var_dump($a === $b);  // false — mesmo valor E tipo?
@@ -192,58 +193,17 @@ echo "\n";
 
 
 // --------------------------------------------
-// 3.6 ESTRUTURAS DE REPETIÇÃO
+// 3.6 ESTRUTURAS DE REPETIÇÃO (introdução - slide 10)
 // --------------------------------------------
+// Por que escrever o mesmo comando dez vezes?
 // Laços permitem repetir um bloco de instruções de forma controlada.
-
-echo "=== 3.6.1 while ===\n";
-
-$i = 1;
-while ($i <= 5) {      // verifica antes: pode não executar
-    echo $i;
-    $i++;
-}
-echo "\n";
-
-echo "=== 3.6.1 do-while ===\n";
-
-$j = 1;
-do {                   // verifica depois: executa ao menos uma vez
-    echo $j;
-    $j++;
-} while ($j <= 5);
-echo "\n";
-
-echo "=== 3.6.2 for ===\n";
-
-for ($k = 1; $k <= 10; $k++) {
-    echo "Número: $k\n";
-}
-
-// Tabuada do 3 com for
-echo "Tabuada do 3:\n";
-for ($n = 1; $n <= 10; $n++) {
-    echo "3 x $n = " . (3 * $n) . "\n";
-}
-
-echo "\n";
-
-echo "=== 3.6.3 foreach ===\n";
-
-$frutas = ["Maçã", "Banana", "Laranja"];
-
-foreach ($frutas as $fruta) {
-    echo "Eu gosto de $fruta\n";
-}
-
-// Com chave e valor
-$aluno = ["nome" => "Maria", "idade" => 20, "curso" => "PHP"];
-
-foreach ($aluno as $chave => $valor) {
-    echo "$chave: $valor\n";
-}
-
-echo "\n";
+//
+//   while      -> condição antes      (pode não executar)
+//   do-while   -> execução antes      (executa ao menos uma vez)
+//   for        -> contagem controlada
+//   foreach    -> percorre coleções
+//
+// Os exemplos práticos (slides 11 a 13) ficam para o próximo encontro.
 
 
 if (PHP_SAPI !== 'cli') {
