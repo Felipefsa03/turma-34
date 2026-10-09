@@ -60,6 +60,7 @@
 	// Total: R$ 150
 	// Compra acima de R$ 100? Sim
 
+    $price = 80;
     $quantity = 2;
     $subtotal = $price * $quantity;
     $discount = 10;
@@ -78,10 +79,41 @@
     }
 
 
-    
+
 
     // 3.3 — Desafio 4: O mistério dos tipos de dados
 	// Crie quatro variáveis contendo: "25", 25, 25.5 e true.
 	// Utilize var_dump() para descobrir o tipo de cada variável. Depois, transforme a string "25" em um 
     // número inteiro usando type casting e compare com o número 25 utilizando ===.
 	// Pergunta para a turma: por que "25" === 25 retorna false, mesmo que os valores pareçam iguais?
+
+
+    $a = "25";
+    $b = 25;
+    $c = 25.5;
+    $d = true;
+
+    var_dump($a);
+    var_dump($b);
+    var_dump($c);
+    var_dump($d);
+
+    $a = (int) $a;
+    if ($a === $b) {
+        echo "A variável 'a' é igual à variável 'b'\n";
+    } else {
+        echo "A variável 'a' não é igual à variável 'b'\n";
+    }
+
+    // 3.4 — Desafio 5: Cadastro interativo (Entrada de dados)
+	// Desenvolva um pequeno cadastro que solicite ao usuário seu nome, sua idade e sua linguagem de programação favorita.
+	// Utilize readline() e exiba uma mensagem personalizada ao final.
+	// EXEMPLO DE EXECUÇÃO NO TERMINAL
+	// Digite seu nome: Ana
+	// Digite sua idade: 20
+	// Linguagem favorita: PHP
+
+	// Olá, Ana! Você tem 20 anos
+	// e gosta de programar em PHP!
+
+
