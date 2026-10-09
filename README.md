@@ -129,7 +129,8 @@ turma-34/
 │   └── recap-aula-04.md
 └── Aula5/                    # Fundamentos PHP (revisão + laços de repetição)
     ├── Fundamentos_PHP_Revisao_e_Lacos.pdf
-    └── index.php             # Revisão 3.1–3.5 + laços (while, do-while, for, foreach)
+    ├── index.php             # Revisão 3.1–3.5 + introdução a 3.6
+    └── recap-aula-05.md
 ```
 
 A organização segue o padrão **`Aula<n>/`**, e dentro de cada pasta:
@@ -414,7 +415,7 @@ O versionamento com Git e GitHub é prática **contínua e obrigatória** em tod
 | 02 | 2 · Ambiente | IDE, terminal, CLI e servidor local | ✅ | [`recap-aula-02.md`](Aula2/recap-aula-02.md) | ✅ |
 | 03 | 3 · Fundamentos PHP | Saída de dados, variáveis, constantes e operadores | ✅ | [`recap-aula-03.md`](Aula3/recap-aula-03.md) | ✅ |
 | 04 | 3 · Fundamentos PHP | Tipos e coerção, entrada de dados (`$_POST`, `$_GET`, `readline`) e condicionais | ✅ | [`recap-aula-04.md`](Aula4/recap-aula-04.md) | ✅ |
-| 05 | 3 · Fundamentos PHP | Revisão (3.1–3.5) + laços de repetição (3.6) — encontro em andamento até o slide 10 | ✅ | — | ✅ |
+| 05 | 3 · Fundamentos PHP | Revisão (3.1–3.5) + introdução aos laços de repetição (3.6) — até o slide 10 | ✅ | [`recap-aula-05.md`](Aula5/recap-aula-05.md) | ✅ |
 
 ---
 
