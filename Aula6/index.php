@@ -154,7 +154,8 @@ echo "e gosta de programar em " . $favorite_language . "!\n";
 
 
     // 3.5.2 — Desafio 7: Cardápio digital (switch)
-	// Crie um programa que apresente o cardápio de uma lanchonete. O usuário deve digitar o número do produto desejado.
+	// Crie um programa que apresente o cardápio de uma lanchonete. O usuário deve digitar o número do 
+    // produto desejado.
 	// === LANCHONETE PHP ===
 	// 1 - Hambúrguer: R$ 15
 	// 2 - Pizza: R$ 25
@@ -166,4 +167,36 @@ echo "e gosta de programar em " . $favorite_language . "!\n";
 	// Você escolheu Pizza - R$ 25!
 
 	// Utilize switch para identificar a escolha e default para tratar opções inválidas.
-    
+
+$precoHamburguer = 15;
+$precoPizza = 25;
+$precoRefrigerante = 6;
+$precoSuco = 8;
+
+echo "\n=== LANCHONETE PHP ===\n";
+echo "1 - Hambúrguer: R$ " . $precoHamburguer . "\n";
+echo "2 - Pizza: R$ " . $precoPizza . "\n";
+echo "3 - Refrigerante: R$ " . $precoRefrigerante . "\n";
+echo "4 - Suco: R$ " . $precoSuco . "\n";
+
+$opcao = readline("Escolha uma opção: ");
+echo "". $opcao . "";
+
+echo "Voce escolheu ";
+switch ($opcao) {
+    case 1:
+        echo "Hamburguer - R$ " . $precoHamburguer . "\n";
+        break;
+    case 2:
+        echo "Pizza - R$ " . $precoPizza . "\n";
+        break;
+    case 3:
+        echo "Refrigerante - R$ " . $precoRefrigerante . "\n";
+        break;
+    case 4:
+        echo "Suco - R$ " . $precoSuco . "\n";
+        break;
+    default:
+        echo "Opção inválida!\n";
+        break;
+}
