@@ -137,3 +137,33 @@ echo "e gosta de programar em " . $favorite_language . "!\n";
 	// Fora de 0 a 10	Nota inválida
 	// Desafio extra: solicite também a frequência do aluno. Para ser aprovado, ele precisa ter nota 
     // maior ou igual a 7 e frequência de pelo menos 75%.
+
+    echo "\nSistema de aprovação\nDa escola de Wagner\n";
+    $grade = readline("Digite a nota do aluno (0 a 10): ");
+    $attendance = readline("Digite a frequência do aluno (em %): ");    
+    if($grade >= 7 && $attendance >= 75){
+        echo "Aprovado\n";
+    }elseif($grade >= 5 && $grade < 7){
+        echo "Recuperação\n";
+    }elseif($grade >= 0 && $grade < 5){
+        echo "Reprovado\n";
+    }else{
+        echo "Nota invalida";
+    }
+
+
+
+    // 3.5.2 — Desafio 7: Cardápio digital (switch)
+	// Crie um programa que apresente o cardápio de uma lanchonete. O usuário deve digitar o número do produto desejado.
+	// === LANCHONETE PHP ===
+	// 1 - Hambúrguer: R$ 15
+	// 2 - Pizza: R$ 25
+	// 3 - Refrigerante: R$ 6
+	// 4 - Suco: R$ 8
+
+	// Escolha uma opção: 2
+
+	// Você escolheu Pizza - R$ 25!
+
+	// Utilize switch para identificar a escolha e default para tratar opções inválidas.
+    
