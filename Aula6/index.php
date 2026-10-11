@@ -200,3 +200,17 @@ switch ($opcao) {
         echo "Opção inválida!\n";
         break;
 }
+
+
+// 3.5.3 — Desafio 8: Pode entrar? (Operador ternário)
+// 	Uma aplicação precisa verificar se uma pessoa pode acessar conteúdo restrito a 
+// maiores de idade.
+// 	Solicite a idade do usuário e utilize apenas o operador ternário para 
+// determinar a mensagem:
+// 	- 18 anos ou mais: "Acesso permitido"
+// 	- Menos de 18 anos: "Acesso negado"
+// 	Desafio extra: refaça a classificação de aprovado/reprovado do desafio 6 usando o ternário, considerando apenas nota maior ou igual a 7.
+
+$idade = readline("Digite sua idade: ");
+$mensagem = ($idade >= 18) ? "Acesso permitido" : "Acesso negado";
+echo $mensagem . "\n";
