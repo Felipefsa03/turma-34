@@ -135,11 +135,16 @@ turma-34/
 │   ├── index.php             # 8 desafios resolvidos em aula
 │   ├── recap-aula-06.md
 │   └── Desafio.md            # Desafio "Cine PHP" (integra tudo)
-└── Aula7/                    # Laços de repetição (3.6) + aula extra de Engenharia de Software
-    ├── Antes de Codar - Processo de Desenvolvimento de Software.pdf
-    ├── index.php             # while, do-while, for e foreach na prática
-    ├── recap-aula-07.md
-    └── recap-extra-processo-desenvolvimento.md
+├── Aula7/                    # Laços de repetição (3.6) + aula extra de Engenharia de Software
+│   ├── Antes de Codar - Processo de Desenvolvimento de Software.pdf
+│   ├── index.php             # while, do-while, for e foreach na prática
+│   ├── recap-aula-07.md
+│   └── recap-extra-processo-desenvolvimento.md
+└── Aula8/                    # Arrays, funções, strings, debugging e projeto
+    ├── Fundamentos do PHP_ Arrays, Funções e Projeto Prático.pdf
+    ├── index.php             # exemplos 3.7–3.12 + menu interativo
+    ├── wagner.php            # classe com getters e setters
+    └── recap-aula-08.md
 ```
 
 A organização segue o padrão **`Aula<n>/`**, e dentro de cada pasta:
@@ -168,6 +173,7 @@ fáceis de ler no GitHub e no celular.
 | `Fundamentos PHP.pdf` (Aula 04) | 04 | Tipos e coerção, entrada de dados e condicionais |
 | `Fundamentos_PHP_Revisao_e_Lacos.pdf` | 05 | Revisão dos fundamentos (3.1–3.5) e laços de repetição (3.6) |
 | `Antes de Codar - Processo de Desenvolvimento de Software.pdf` | 07 (extra) | Processo de desenvolvimento, requisitos, arquitetura, planejamento e validação |
+| `Fundamentos do PHP_ Arrays, Funções e Projeto Prático.pdf` | 08 | Arrays, funções, strings, debugging, projeto e getters/setters |
 
 > 💡 Os slides das próximas aulas serão adicionados a cada encontro, sempre na pasta da
 > aula correspondente.
@@ -428,6 +434,7 @@ O versionamento com Git e GitHub é prática **contínua e obrigatória** em tod
 | 05 | 3 · Fundamentos PHP | Revisão (3.1–3.5) + introdução aos laços de repetição (3.6) — até o slide 10 | ✅ | [`recap-aula-05.md`](Aula5/recap-aula-05.md) | ✅ |
 | 06 | 3 · Fundamentos PHP | Prática de 3.1 a 3.5 (ênfase em entrada de dados e condicionais) com 8 desafios | 🔁 | [`recap-aula-06.md`](Aula6/recap-aula-06.md) | ✅ |
 | 07 | 3 · Fundamentos PHP | Laços de repetição (3.6) na prática — `while`, `do-while`, `for` e `foreach` | 🔁 | [`recap-aula-07.md`](Aula7/recap-aula-07.md) | ✅ |
+| 08 | 3 · Fundamentos PHP | Arrays (3.7), funções (3.8), strings (3.9), nativas (3.10), debugging (3.11), projeto (3.12) e getters/setters | ✅ | [`recap-aula-08.md`](Aula8/recap-aula-08.md) | ✅ |
 | ⭐ | Engenharia de Software | **Aula extra** — antes de codar: processo de desenvolvimento de software | ✅ | [`recap-extra-processo-desenvolvimento.md`](Aula7/recap-extra-processo-desenvolvimento.md) | — |
 
 > 🔁 = aula de **prática**: reaproveita os slides dos tópicos anteriores. O desafio extra da Aula 06 está em
