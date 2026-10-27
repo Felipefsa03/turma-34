@@ -1,0 +1,20 @@
+create database Felipe;
+
+use Felipe;
+
+create table carros (
+    nome char(100),
+    ano data,
+    placa varchar(16)
+);
+
+insert into carros values
+('Ford Ka','2014','gvg2132'), 
+('Siena','2020','piv1234');
+
+select * from Felipe.carros;
+select table carros;
+
+drop table carros;
+
+delete database Felipe;
