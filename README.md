@@ -140,11 +140,13 @@ turma-34/
 │   ├── index.php             # while, do-while, for e foreach na prática
 │   ├── recap-aula-07.md
 │   └── recap-extra-processo-desenvolvimento.md
-└── Aula8/                    # Arrays, funções, strings, debugging e projeto
-    ├── Fundamentos do PHP_ Arrays, Funções e Projeto Prático.pdf
-    ├── index.php             # exemplos 3.7–3.12 + menu interativo
-    ├── wagner.php            # classe com getters e setters
-    └── recap-aula-08.md
+├── Aula8/                    # Arrays, funções, strings, debugging e projeto
+│   ├── Fundamentos do PHP_ Arrays, Funções e Projeto Prático.pdf
+│   ├── index.php             # exemplos 3.7–3.12 + menu interativo
+│   ├── wagner.php            # classe com getters e setters
+│   └── recap-aula-08.md
+└── Aula10/                   # Desafio de encerramento do Módulo 3
+    └── Desafio.md            # Desafio do módulo (2 desafios, sem gabarito)
 ```
 
 A organização segue o padrão **`Aula<n>/`**, e dentro de cada pasta:
@@ -436,11 +438,15 @@ O versionamento com Git e GitHub é prática **contínua e obrigatória** em tod
 | 07 | 3 · Fundamentos PHP | Laços de repetição (3.6) na prática — `while`, `do-while`, `for` e `foreach` | 🔁 | [`recap-aula-07.md`](Aula7/recap-aula-07.md) | ✅ |
 | 08 | 3 · Fundamentos PHP | Arrays (3.7), funções (3.8), strings (3.9), nativas (3.10), debugging (3.11), projeto (3.12) e getters/setters | ✅ | [`recap-aula-08.md`](Aula8/recap-aula-08.md) | ✅ |
 | ⭐ | Engenharia de Software | **Aula extra** — antes de codar: processo de desenvolvimento de software | ✅ | [`recap-extra-processo-desenvolvimento.md`](Aula7/recap-extra-processo-desenvolvimento.md) | — |
+| 09 | 3 · Fundamentos PHP | *a confirmar* | 🔜 | — | — |
+| 10 | 3 · Fundamentos PHP | **Desafio de encerramento do módulo** — dois desafios práticos (loja de bairro e RPG de texto) | ✅ | [`Desafio.md`](Aula10/Desafio.md) | — |
 
-> 🔁 = aula de **prática**: reaproveita os slides dos tópicos anteriores. O desafio extra da Aula 06 está em
-> [`Aula6/Desafio.md`](Aula6/Desafio.md) — o "Cine PHP", que integra tudo em um único programa. A **aula extra**
-> de Engenharia de Software (dentro de `Aula7/`) está em
-> [`Aula7/recap-extra-processo-desenvolvimento.md`](Aula7/recap-extra-processo-desenvolvimento.md).
+> 🔁 = aula de **prática**: reaproveita os slides dos tópicos anteriores. 🔜 = aula ainda não realizada. O desafio
+> extra da Aula 06 está em [`Aula6/Desafio.md`](Aula6/Desafio.md) — o "Cine PHP", que integra tudo em um único
+> programa. A **aula extra** de Engenharia de Software (dentro de `Aula7/`) está em
+> [`Aula7/recap-extra-processo-desenvolvimento.md`](Aula7/recap-extra-processo-desenvolvimento.md). O **desafio do
+> módulo** (Aula 10) está em [`Aula10/Desafio.md`](Aula10/Desafio.md) — dois desafios que somam tudo o que foi
+> ensinado no Módulo 3, com entrega obrigatoriamente versionada no GitHub.
 
 ---
 
