@@ -1,8 +1,8 @@
 # Programação de Sistemas — Turma 34
 
 Repositório de apoio da turma 34 da disciplina **Programação de Sistemas**.
-Contém os slides (PDF) de cada aula, os exemplos de código em PHP e os **recaps**
-de conteúdo das aulas realizadas.
+Contém os slides (PDF) de cada aula, os exemplos de código em **PHP** e **SQL**, os **recaps**
+de conteúdo das aulas realizadas e os **desafios** de encerramento dos módulos.
 
 > **Disciplina:** Programação de Sistemas
 > **Docente responsável:** Thiago Bastos Cerqueira
@@ -36,6 +36,7 @@ Para seguir os exemplos, você vai precisar de:
 |---|---|---|
 | **Git** | Clonar o repositório e versionar seu código | <https://git-scm.com/downloads> |
 | **PHP 8.0+** | Interpretador que executa os scripts | <https://www.php.net/downloads.php> |
+| **MySQL 8+** (ou XAMPP) | Executar os scripts `.sql` do Módulo 4 | <https://dev.mysql.com/downloads/> |
 | **VS Code** | Editor de código (recomendado) + extensão **PHP Intelephense** | <https://code.visualstudio.com> |
 
 Verificando se o PHP está instalado:
@@ -89,6 +90,20 @@ php index.php
 > ```bash
 > printf '1\nAna Souza\n22\n2\n9\n8\n3\n4\n' | php desafio.php
 > ```
+
+**SQL (Aulas 12 a 16):**
+
+```bash
+mysql -u root -p < Aula16/index.sql
+```
+
+Ou abra o arquivo `.sql` no MySQL Workbench, DBeaver ou phpMyAdmin e execute por blocos.
+Cada aula de SQL tem seu script: [`Aula13/index.sql`](Aula13/index.sql) (DDL + CRUD),
+[`Aula14/index.sql`](Aula14/index.sql) (prática de JOIN) e
+[`Aula16/index.sql`](Aula16/index.sql) (consultas avançadas + projeto `escola_sql`).
+
+> 💡 Antes de executar um script que usa `DROP`, leia os comentários: ele recria as tabelas
+> didáticas. Em caso de dúvida, use um banco separado.
 
 ### 5. Contribuir com o repositório
 
@@ -145,15 +160,48 @@ turma-34/
 │   ├── index.php             # exemplos 3.7–3.12 + menu interativo
 │   ├── wagner.php            # classe com getters e setters
 │   └── recap-aula-08.md
-└── Aula10/                   # Desafio de encerramento do Módulo 3
-    └── Desafio.md            # Desafio do módulo (2 desafios, sem gabarito)
+├── Aula9/                    # Funções com tipos, switch, readline e calculadora
+│   ├── Fundamentos do PHP_ Arrays, Funções e Projeto Prático.pdf
+│   ├── index.php
+│   └── recap-aula-09.md
+├── Aula10/                   # Desafio de encerramento do Módulo 3
+│   ├── Fundamentos do PHP_ Arrays, Funções e Projeto Prático.pdf
+│   ├── Desafio.md            # Desafio do módulo (2 desafios)
+│   ├── RegrasDesafio.md      # Regras complementares
+│   ├── recap-aula-10.md
+│   └── index.txt
+├── Aula11/                   # Prática PHP: sistema de notas
+│   └── notas.php             # média ponderada + presença + validação
+├── Aula12/                   # Primeiros passos com Banco de Dados e MySQL
+│   ├── Banco de Dados e MySQL.pdf
+│   └── index.php             # carrinho em PHP (prática de arrays/funções)
+├── Aula13/                   # SQL: DDL e CRUD (Loja Byte)
+│   ├── Bancos_de_Dados_Relacionais_SQL_Luis_Felipe.pdf
+│   ├── index.sql             # banco, tabelas, CRUD, JOINs e agregações
+│   ├── desafio.md            # Desafio de CRUD
+│   └── recap-aula-13.md
+├── Aula14/                   # SQL: JOINs e agregações
+│   ├── Bancos_de_Dados_Relacionais_SQL_Luis_Felipe.pdf
+│   ├── index.sql             # prática de tabelas relacionadas
+│   ├── desafio.md            # Desafio de JOINs + agregações
+│   └── recap-aula-14.md
+├── Aula15/                   # SQL: modelagem e consolidação (4.3–4.6)
+│   ├── Bancos_de_Dados_Relacionais_SQL_Luis_Felipe.pdf
+│   └── recap-aula-15.md      # MER, PK/FK, CRUD, JOIN e agregações
+└── Aula16/                   # SQL avançado + projeto final (4.7–4.9)
+    ├── SQL_Apresentacao_Completa_Modulos_4_3_a_4_9.pdf
+    ├── index.sql             # subqueries, EXISTS, EXPLAIN, cenários e escola_sql
+    ├── recap-aula-16.md
+    └── Desafio.md            # Desafio de encerramento do Módulo 4
 ```
 
 A organização segue o padrão **`Aula<n>/`**, e dentro de cada pasta:
 
 - 📄 **Arquivos `.pdf`** — os slides apresentados em aula (material de apoio)
 - 📝 **`recap-aula-<n>.md`** — o resumo do conteúdo, com links para aprofundar
-- 💻 **`index.php`** — exemplos executáveis escritos durante a aula
+- 💻 **`index.php`** — exemplos executáveis em PHP escritos durante a aula
+- 🗄️ **`index.sql`** — scripts executáveis em um cliente MySQL
+- 🏆 **`Desafio.md` / `desafio.md`** — desafios de fixação e de encerramento de módulo
 
 ---
 
@@ -162,9 +210,9 @@ A organização segue o padrão **`Aula<n>/`**, e dentro de cada pasta:
 Os PDFs são os **slides originais de cada aula**. Eles servem como material de consulta
 rápida — são o complemento visual do que está escrito nos recaps.
 
-**Importante:** os PDFs são **somente leitura**. Todo o conteúdo que você precisa para
-programar está também nos arquivos Markdown (`recap-aula-*.md`), que são editáveis,
-fáceis de ler no GitHub e no celular.
+**Importante:** os PDFs são **somente leitura**. Nas aulas com recap, o conteúdo também está
+nos arquivos Markdown (`recap-aula-*.md`), editáveis e fáceis de ler no GitHub e no celular;
+quando há código, ele está nos arquivos `.php`/`.sql`.
 
 | PDF | Aula | Assunto |
 |---|---|---|
@@ -176,9 +224,17 @@ fáceis de ler no GitHub e no celular.
 | `Fundamentos_PHP_Revisao_e_Lacos.pdf` | 05 | Revisão dos fundamentos (3.1–3.5) e laços de repetição (3.6) |
 | `Antes de Codar - Processo de Desenvolvimento de Software.pdf` | 07 (extra) | Processo de desenvolvimento, requisitos, arquitetura, planejamento e validação |
 | `Fundamentos do PHP_ Arrays, Funções e Projeto Prático.pdf` | 08 | Arrays, funções, strings, debugging, projeto e getters/setters |
+| `Fundamentos do PHP_ Arrays, Funções e Projeto Prático.pdf` (Aula 09) | 09 | Funções tipadas, `switch`, `readline()` e calculadora no terminal |
+| `Fundamentos do PHP_ Arrays, Funções e Projeto Prático.pdf` (Aula 10) | 10 | Revisão final para o desafio do Módulo 3 |
+| `Banco de Dados e MySQL.pdf` | 12 | Conceitos de banco de dados, MySQL e primeiros comandos |
+| `Bancos_de_Dados_Relacionais_SQL_Luis_Felipe.pdf` (Aula 13) | 13 | DDL, CRUD e transações na Loja Byte |
+| `Bancos_de_Dados_Relacionais_SQL_Luis_Felipe.pdf` (Aula 14) | 14 | JOINs, agregações, `GROUP BY` e `HAVING` |
+| `Bancos_de_Dados_Relacionais_SQL_Luis_Felipe.pdf` (Aula 15) | 15 | Modelagem (MER, PK/FK) e consolidação de 4.3–4.6 |
+| `SQL_Apresentacao_Completa_Modulos_4_3_a_4_9.pdf` | 16 | Subqueries, `EXISTS`, `EXPLAIN`, cenários e projeto final |
 
-> 💡 Os slides das próximas aulas serão adicionados a cada encontro, sempre na pasta da
-> aula correspondente.
+> 💡 O deck de 31 slides aparece nas Aulas 13, 14 e 15; na Aula 16 ele foi estendido para 50
+> slides com os módulos 4.7 a 4.9. Novos slides serão adicionados a cada encontro, sempre na
+> pasta da aula correspondente.
 
 ---
 
@@ -427,26 +483,45 @@ O versionamento com Git e GitHub é prática **contínua e obrigatória** em tod
 
 ## 📊 Progresso das Aulas
 
-| Aula | Módulo | Conteúdo | Slides | Recap | Código |
-|:----:|:------:|----------|:------:|:-----:|:------:|
-| 01 | 1 · Introdução | Programação, sistemas, lógica, fluxogramas e Git | ✅ | [`recap-aula-01.md`](Aula1/recap-aula-01.md) | — |
-| 02 | 2 · Ambiente | IDE, terminal, CLI e servidor local | ✅ | [`recap-aula-02.md`](Aula2/recap-aula-02.md) | ✅ |
-| 03 | 3 · Fundamentos PHP | Saída de dados, variáveis, constantes e operadores | ✅ | [`recap-aula-03.md`](Aula3/recap-aula-03.md) | ✅ |
-| 04 | 3 · Fundamentos PHP | Tipos e coerção, entrada de dados (`$_POST`, `$_GET`, `readline`) e condicionais | ✅ | [`recap-aula-04.md`](Aula4/recap-aula-04.md) | ✅ |
-| 05 | 3 · Fundamentos PHP | Revisão (3.1–3.5) + introdução aos laços de repetição (3.6) — até o slide 10 | ✅ | [`recap-aula-05.md`](Aula5/recap-aula-05.md) | ✅ |
-| 06 | 3 · Fundamentos PHP | Prática de 3.1 a 3.5 (ênfase em entrada de dados e condicionais) com 8 desafios | 🔁 | [`recap-aula-06.md`](Aula6/recap-aula-06.md) | ✅ |
-| 07 | 3 · Fundamentos PHP | Laços de repetição (3.6) na prática — `while`, `do-while`, `for` e `foreach` | 🔁 | [`recap-aula-07.md`](Aula7/recap-aula-07.md) | ✅ |
-| 08 | 3 · Fundamentos PHP | Arrays (3.7), funções (3.8), strings (3.9), nativas (3.10), debugging (3.11), projeto (3.12) e getters/setters | ✅ | [`recap-aula-08.md`](Aula8/recap-aula-08.md) | ✅ |
-| ⭐ | Engenharia de Software | **Aula extra** — antes de codar: processo de desenvolvimento de software | ✅ | [`recap-extra-processo-desenvolvimento.md`](Aula7/recap-extra-processo-desenvolvimento.md) | — |
-| 09 | 3 · Fundamentos PHP | *a confirmar* | 🔜 | — | — |
-| 10 | 3 · Fundamentos PHP | **Desafio de encerramento do módulo** — dois desafios práticos (loja de bairro e RPG de texto) | ✅ | [`Desafio.md`](Aula10/Desafio.md) | — |
+| Aula | Módulo | Conteúdo | Slides | Recap | Código | Desafio |
+|:----:|:------:|----------|:------:|:-----:|:------:|:-------:|
+| 01 | 1 · Introdução | Programação, sistemas, lógica, fluxogramas e Git | ✅ | [`recap-aula-01.md`](Aula1/recap-aula-01.md) | — | — |
+| 02 | 2 · Ambiente | IDE, terminal, CLI e servidor local | ✅ | [`recap-aula-02.md`](Aula2/recap-aula-02.md) | ✅ | — |
+| 03 | 3 · Fundamentos PHP | Saída de dados, variáveis, constantes e operadores | ✅ | [`recap-aula-03.md`](Aula3/recap-aula-03.md) | ✅ | — |
+| 04 | 3 · Fundamentos PHP | Tipos e coerção, entrada de dados (`$_POST`, `$_GET`, `readline`) e condicionais | ✅ | [`recap-aula-04.md`](Aula4/recap-aula-04.md) | ✅ | — |
+| 05 | 3 · Fundamentos PHP | Revisão (3.1–3.5) + introdução aos laços de repetição (3.6) — até o slide 10 | ✅ | [`recap-aula-05.md`](Aula5/recap-aula-05.md) | ✅ | — |
+| 06 | 3 · Fundamentos PHP | Prática de 3.1 a 3.5 (ênfase em entrada de dados e condicionais) com 8 desafios | 🔁 | [`recap-aula-06.md`](Aula6/recap-aula-06.md) | ✅ | [`Desafio.md`](Aula6/Desafio.md) |
+| 07 | 3 · Fundamentos PHP | Laços de repetição (3.6) na prática — `while`, `do-while`, `for` e `foreach` | 🔁 | [`recap-aula-07.md`](Aula7/recap-aula-07.md) | ✅ | — |
+| 08 | 3 · Fundamentos PHP | Arrays (3.7), funções (3.8), strings (3.9), nativas (3.10), debugging (3.11), projeto (3.12) e getters/setters | ✅ | [`recap-aula-08.md`](Aula8/recap-aula-08.md) | ✅ | — |
+| ⭐ | Engenharia de Software | **Aula extra** — antes de codar: processo de desenvolvimento de software | ✅ | [`recap-extra-processo-desenvolvimento.md`](Aula7/recap-extra-processo-desenvolvimento.md) | — | — |
+| 09 | 3 · Fundamentos PHP | Funções com tipagem, `switch`, `readline()` e calculadora no terminal | 🔁 | [`recap-aula-09.md`](Aula9/recap-aula-09.md) | ✅ | — |
+| 10 | 3 · Fundamentos PHP | **Encerramento do Módulo 3** — loja de bairro e RPG de texto | 🔁 | [`recap-aula-10.md`](Aula10/recap-aula-10.md) | — | [`Desafio.md`](Aula10/Desafio.md) |
+| 11 | 3 · Fundamentos PHP | Sistema de notas: média ponderada, presença e validação (PHP CLI) | — | — | [`notas.php`](Aula11/notas.php) | — |
+| 12 | 2 / 4 · Ambiente e BD | Banco de Dados e MySQL: conceitos iniciais + prática PHP | ✅ | — | [`index.php`](Aula12/index.php) | — |
+| 13 | 4 · Banco de Dados | DDL e CRUD na Loja Byte — `INSERT`, `SELECT`, `UPDATE`, `DELETE`, transações | ✅ | [`recap-aula-13.md`](Aula13/recap-aula-13.md) | [`index.sql`](Aula13/index.sql) | [`desafio.md`](Aula13/desafio.md) |
+| 14 | 4 · Banco de Dados | JOINs (INNER/LEFT/RIGHT) e agregações (`COUNT`, `SUM`, `AVG`, `MIN/MAX`, `GROUP BY`, `HAVING`) | ✅ | [`recap-aula-14.md`](Aula14/recap-aula-14.md) | [`index.sql`](Aula14/index.sql) | [`desafio.md`](Aula14/desafio.md) |
+| 15 | 4 · Banco de Dados | Modelagem (MER, entidades, PK/FK) e consolidação de 4.3 a 4.6 | 🔁 | [`recap-aula-15.md`](Aula15/recap-aula-15.md) | [`index.sql`](Aula13/index.sql) | — |
+| 16 | 4 · Banco de Dados | Consultas avançadas (subqueries, `EXISTS`, `EXPLAIN`), cenários e projeto `escola_sql` | ✅ | [`recap-aula-16.md`](Aula16/recap-aula-16.md) | [`index.sql`](Aula16/index.sql) | **[`Desafio.md`](Aula16/Desafio.md)** |
 
-> 🔁 = aula de **prática**: reaproveita os slides dos tópicos anteriores. 🔜 = aula ainda não realizada. O desafio
-> extra da Aula 06 está em [`Aula6/Desafio.md`](Aula6/Desafio.md) — o "Cine PHP", que integra tudo em um único
-> programa. A **aula extra** de Engenharia de Software (dentro de `Aula7/`) está em
-> [`Aula7/recap-extra-processo-desenvolvimento.md`](Aula7/recap-extra-processo-desenvolvimento.md). O **desafio do
-> módulo** (Aula 10) está em [`Aula10/Desafio.md`](Aula10/Desafio.md) — dois desafios que somam tudo o que foi
-> ensinado no Módulo 3, com entrega obrigatoriamente versionada no GitHub.
+> 🔁 = aula de **prática/revisão**: reaproveita slides de tópicos anteriores. ✅ = slides disponíveis
+> na pasta da aula. O desafio extra da Aula 06 é o ["Cine PHP"](Aula6/Desafio.md). A **aula extra**
+> de Engenharia de Software está em
+> [`Aula7/recap-extra-processo-desenvolvimento.md`](Aula7/recap-extra-processo-desenvolvimento.md).
+
+---
+
+## 🏆 Desafios
+
+| Desafio | Abrange | Entrega |
+|---------|---------|---------|
+| [Cine PHP](Aula6/Desafio.md) | Fundamentos PHP (3.1–3.5) | programa PHP integrando entrada, condicionais e laços |
+| [Módulo 3](Aula10/Desafio.md) | Tudo do Módulo 3 (3.1–3.12) | dois programas PHP versionados no GitHub |
+| [CRUD na Loja Byte](Aula13/desafio.md) | DDL, `INSERT`, `SELECT`, `UPDATE`, `DELETE` e transações | script `.sql` |
+| [CRUD → decisões](Aula14/desafio.md) | CRUD + JOINs + agregações | script `.sql` |
+| **[Módulo 4 — Biblioteca da Turma](Aula16/Desafio.md)** | **Tudo do Módulo 4 (4.1–4.9)** | projeto completo: MER, script `.sql`, relatórios e README |
+
+> O desafio do Módulo 4 (Aula 16) é a **entrega final do bloco de SQL**: do MER à otimização com
+> `EXPLAIN`, passando por CRUD seguro, JOINs, agregações, subqueries e um projeto documentado.
 
 ---
 
@@ -474,7 +549,7 @@ estudo.
 <div align="center">
 
 **Programação de Sistemas · Turma 34**
-Feito com dedicate por [Luis Felipe Araujo Lima](https://www.linkedin.com/in/luis-felipe-304a96228/)
+Feito com dedicação por [Luis Felipe Araujo Lima](https://www.linkedin.com/in/luis-felipe-304a96228/)
 para a turma.
 
 </div>
