@@ -1,11 +1,15 @@
--- DROP DATABASE Turma34;
--- CREATE DATABASE Turma34;
+-- DROP DATABASE IF EXISTS Turma34;
+
+-- CREATE DATABASE IF NOT EXISTS Turma34;
 -- USE Turma34;
 
 -- DELETE TABLE IF EXISTS Alunos;
 
--- CREATE TABLE Alunos (
---     id  int PRIMARY KEY AUTO_INCREMENT,
+
+-- nome VARCHAR(100) (PK ou FK) ...commands... ,
+
+-- CREATE TABLE IF NOT EXISTS Alunos (
+--     id  INT PRIMARY KEY AUTO_INCREMENT,
 --     nome VARCHAR(100) NOT NULL,
 --     idade INT NOT NULL,
 --     email VARCHAR(100) UNIQUE NOT NULL
@@ -403,7 +407,7 @@ INNER JOIN pedidos p
 INNER JOIN itens_pedido i
     ON i.id_pedido = p.id_pedido
 GROUP BY c.estado
-ORDER BY faturamento DESC;
+ORDER BY faturamento ASC;
 
 
 -- =====================================================
@@ -415,14 +419,14 @@ ORDER BY faturamento DESC;
 SELECT
     c.estado,
     SUM(i.quantidade * i.preco_unitario)
-        AS faturamento
+    AS faturamento
 FROM clientes c
 INNER JOIN pedidos p
     ON p.id_cliente = c.id_cliente
 INNER JOIN itens_pedido i
     ON i.id_pedido = p.id_pedido
 GROUP BY c.estado
-HAVING SUM(i.quantidade * i.preco_unitario) > 500;
+HAVING faturamento > 600;
 
 
 -- =====================================================
